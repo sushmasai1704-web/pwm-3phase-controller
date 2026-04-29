@@ -1,7 +1,7 @@
 # 3-Phase PWM Controller with AXI4-Lite Interface
 
 Synthesizable SystemVerilog 3-phase PWM controller for motor drive applications.
-
+ 
 ## Features
 - Triangle carrier PWM with configurable frequency
 - Independent duty cycle control for all 3 phases
