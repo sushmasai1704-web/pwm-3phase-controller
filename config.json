@@ -1,0 +1,17 @@
+{
+    "DESIGN_NAME": "pwm_3phase_controller",
+    "VERILOG_FILES": "dir::src/pwm_controller_clean.sv",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 5,
+
+    "FP_CORE_UTIL": 40,
+    "FP_ASPECT_RATIO": 1,
+    "PL_TARGET_DENSITY": 0.45,
+
+    "SYNTH_DEFINES": "CLK_FREQ_HZ=200000000 PWM_FREQ_HZ=20000 DEADTIME_NS=200 DUTY_WIDTH=16 CARRIER_WIDTH=12",
+
+    "pdk::sky130A": {
+        "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+        "MAX_FANOUT_CONSTRAINT": 6
+    }
+}
