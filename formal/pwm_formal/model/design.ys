@@ -1,0 +1,10 @@
+# running in pwm_formal/src/
+read -formal pwm_controller_clean.sv
+read -formal pwm_bind.sv
+read -formal pwm_assertions.sv
+prep -top pwm_3phase_controller
+clk2fflogic
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

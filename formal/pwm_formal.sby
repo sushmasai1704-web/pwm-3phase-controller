@@ -1,0 +1,18 @@
+[options]
+mode prove
+depth 30
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal pwm_controller_clean.sv
+read -formal pwm_bind.sv
+read -formal pwm_assertions.sv
+prep -top pwm_3phase_controller
+clk2fflogic
+
+[files]
+/home/sushma/pwm_project/pwm_controller_clean.sv
+/home/sushma/pwm_project/formal/pwm_bind.sv
+/home/sushma/pwm_project/formal/pwm_assertions.sv
